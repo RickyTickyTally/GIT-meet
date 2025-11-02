@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+body {
+     margin: 0;
+}
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 90px 1fr;
+    grid-template-areas: 
+        "nav header"
+        "nav main";
+}
+
+.nav-panel {
+    grid-area: nav;
+    width: 100%;
+    height: 100%;
+    background-color: #151718;
+    color: white;
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+    background-color: #98bc65;
+}
+
+.main {
+    grid-area: main;
+    padding: 30px 60px;
+    background-color: #e9e9e9;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr .5fr 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 
+        "title title"
+        "info transactions"
+        "wallet transactions"
+        "wallet transfer"
+        "statistics transfer"
+        "statistics transfer";
+}
+
+.title {
+    grid-area: title;
+    background-color: lightcoral;
+}
+
+.total-info {
+    grid-area: info;
+    background-color: aquamarine;
+}
+
+.wallet {
+    grid-area: wallet;
+    background-color: pink;
+}
+
+.statistics {
+    grid-area: statistics;
+    background-color: green;
+}
+
+.transactions {
+    grid-area: transactions;
+    background-color: darkgoldenrod;
+}
+
+.quick-transfer {
+    grid-area: transfer;
+    background-color: blue;
+}
